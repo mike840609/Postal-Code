@@ -5,14 +5,21 @@
 * 2016/03/22 add Mapview
 * 2016/06/03 add Location Serach
 
+## ScreenShot
+
+
+
 ## Installation
 
 pod install
 
 ## API Reference
-Alamofire
-SwiftyJSON
+- [Alamofire](https://github.com/Alamofire/Alamofire)
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 
+
+## Requirements
+- Xcode 7.3
 
 ## License
 
