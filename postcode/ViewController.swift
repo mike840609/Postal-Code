@@ -22,16 +22,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var postCodeLabel:UILabel?
     @IBOutlet weak var localLabel:UILabel?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //初始化位置管理器
+
         locationManager = CLLocationManager()
         locationManager.delegate = self
         
-        //设备使用电池供电时最高的精度
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         //精确到1000米,距离过滤器，定义了设备移动后获得位置信息的最小距离
@@ -46,27 +42,29 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         //使用应用程序期间允许访问位置数据
         locationManager.requestWhenInUseAuthorization();
         
-        //启动定位 從這邊開始執行 =================================================
+        //启动定位 從這邊開始執行===========================================
         locationManager.startUpdatingLocation()
-        
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //FIXME: CoreLocationManagerDelegate 中获取到位置信息的处理函数
     func  locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let location:CLLocation = locations[locations.count-1] as CLLocation
+        
         currLocation=location
+        
         if (location.horizontalAccuracy > 0) {
             self.locationManager.stopUpdatingLocation()
-            print("wgs84坐标系  纬度: \(location.coordinate.latitude) 经度: \(location.coordinate.longitude)")
+            print("纬度: \(location.coordinate.latitude) 经度: \(location.coordinate.longitude)")
             self.locationManager.stopUpdatingLocation()
             print("结束定位")
         }
+        
         //使用坐标，获取地址
         let geocoder = CLGeocoder()
         
@@ -98,14 +96,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                 
                 self.localString = country+locality+name
                 self.postCode = postcode
-                /*
-                if let temp = placemark.postalCode{
-                self.postCode = temp
-                print(temp)
-                }
-                */
-                
-                
+        
                 self.showLocalPoint()
                 
                 self.postCodeLabel!.text = "郵遞區號:\(self.postCode)"
@@ -141,7 +132,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     
     func showLocalPoint(){
         
+        if let annotations = mapView?.annotations{
+         mapView?.removeAnnotations(annotations)
+        }
+        
         let location = CLLocationCoordinate2DMake(currLocation.coordinate.latitude, currLocation.coordinate.longitude)
+        
         let span = MKCoordinateSpanMake(0.002, 0.002)
         
         let region = MKCoordinateRegion(center: location, span: span)
@@ -155,15 +151,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         mapView?.addAnnotation(annotation)
         
-        
-        
     }
     
     func reloadLocation(){
         
         if (CLLocationManager.locationServicesEnabled())
         {
-            //允许使用定位服务的话，开启定位服务更新
             locationManager.startUpdatingLocation()
             print("定位开始")
         }
@@ -173,6 +166,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     @IBAction func reloadBtnTapped(sender: AnyObject) {
         reloadLocation()
         showAlert("地址:\(localString)", msg: "郵遞區號:\(postCode)")
+    }
+    
+    @IBAction func unwindToMapView(segue:UIStoryboardSegue){
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
