@@ -56,7 +56,8 @@ class SerachController: UIViewController {
                     
                     print(jsonObj["zipcode"])
                     
-                    print(json)
+                    self.codeLabel.text = "郵遞區號:" + String(jsonObj["zipcode"])
+                    
                 case .Failure(let err):
                     print(err.description)
                 }
