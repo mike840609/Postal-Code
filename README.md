@@ -1,15 +1,21 @@
 ## postcode
 
 Use the MapKit and CoreLocation to get the zip code ,
-you can also use the input method to convert text to zip code . 
+and you can also use the input method to convert text to zip code . 
 
 
 
 ## ScreenShot
 
- ![image](https://github.com/mike840609/Postal-Code/blob/master/img/1.png)
- ![image](https://github.com/mike840609/Postal-Code/blob/master/img/2.png)
- ![image](https://github.com/mike840609/Postal-Code/blob/master/img/3.png)
+ 
+
+  <img src="https://github.com/mike840609/Postal-Code/blob/master/img/1.png" width="80%" height="80%">
+
+  <img src="https://github.com/mike840609/Postal-Code/blob/master/img/2.png" width="80%" height="80%">
+
+ <img src="https://github.com/mike840609/Postal-Code/blob/master/img/3.png" width="80%" height="80%">
+
+
 
 ## Installation
 
