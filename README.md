@@ -1,6 +1,8 @@
 ## postcode
 
-Use the MapKit and CoreLocation to get the zip code
+Use the MapKit and CoreLocation to get the zip code ,
+you can also use the input method to convert text to zip code . 
+
 
 
 ## ScreenShot

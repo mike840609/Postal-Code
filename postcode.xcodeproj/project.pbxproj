@@ -13,11 +13,11 @@
 		4D13C9B41CA013AC0097E7AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D13C9B21CA013AC0097E7AE /* Main.storyboard */; };
 		4D13C9B61CA013AC0097E7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D13C9B51CA013AC0097E7AE /* Assets.xcassets */; };
 		4D13C9B91CA013AC0097E7AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D13C9B71CA013AC0097E7AE /* LaunchScreen.storyboard */; };
-		4D13C9C61CA0214F0097E7AE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D13C9C31CA0214F0097E7AE /* MaterialView.swift */; };
-		4D13C9C71CA0214F0097E7AE /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D13C9C41CA0214F0097E7AE /* MaterialButton.swift */; };
-		4D13C9C81CA0214F0097E7AE /* MateriaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D13C9C51CA0214F0097E7AE /* MateriaTextField.swift */; };
 		4D13C9CB1CA021820097E7AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D13C9CA1CA021820097E7AE /* Constants.swift */; };
 		4D9C20831CA03AF800802996 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9C20821CA03AF800802996 /* MapKit.framework */; };
+		4DC0BF3A1F124EAE00B2FBD5 /* MateriaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0BF371F124EAE00B2FBD5 /* MateriaTextField.swift */; };
+		4DC0BF3B1F124EAE00B2FBD5 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0BF381F124EAE00B2FBD5 /* MaterialView.swift */; };
+		4DC0BF3C1F124EAE00B2FBD5 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0BF391F124EAE00B2FBD5 /* MaterialButton.swift */; };
 		4DFF18B21D000AC4001E6108 /* SerachController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF18B11D000AC4001E6108 /* SerachController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,11 +29,11 @@
 		4D13C9B51CA013AC0097E7AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D13C9B81CA013AC0097E7AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D13C9BA1CA013AC0097E7AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D13C9C31CA0214F0097E7AE /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
-		4D13C9C41CA0214F0097E7AE /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
-		4D13C9C51CA0214F0097E7AE /* MateriaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MateriaTextField.swift; sourceTree = "<group>"; };
 		4D13C9CA1CA021820097E7AE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4D9C20821CA03AF800802996 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4DC0BF371F124EAE00B2FBD5 /* MateriaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MateriaTextField.swift; path = MaterialUI/MateriaTextField.swift; sourceTree = "<group>"; };
+		4DC0BF381F124EAE00B2FBD5 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialView.swift; path = MaterialUI/MaterialView.swift; sourceTree = "<group>"; };
+		4DC0BF391F124EAE00B2FBD5 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialButton.swift; path = MaterialUI/MaterialButton.swift; sourceTree = "<group>"; };
 		4DFF18B11D000AC4001E6108 /* SerachController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerachController.swift; sourceTree = "<group>"; };
 		5E134AF6A72AD7595ED50191 /* Pods-postcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postcode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-postcode/Pods-postcode.debug.xcconfig"; sourceTree = "<group>"; };
 		79CD84C60C17D6F23E591F0F /* Pods-postcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postcode.release.xcconfig"; path = "Pods/Target Support Files/Pods-postcode/Pods-postcode.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				4D13C9C91CA021750097E7AE /* Util */,
 				4D13C9C21CA0213E0097E7AE /* Controller */,
 				4D13C9C11CA021370097E7AE /* Model */,
-				4D13C9C01CA021220097E7AE /* View */,
+				4DC0BF3D1F124EB800B2FBD5 /* MaterialUI */,
 				4D13C9AE1CA013AC0097E7AE /* AppDelegate.swift */,
 				4D13C9B21CA013AC0097E7AE /* Main.storyboard */,
 				4D13C9B51CA013AC0097E7AE /* Assets.xcassets */,
@@ -86,17 +86,6 @@
 				4D13C9BA1CA013AC0097E7AE /* Info.plist */,
 			);
 			path = postcode;
-			sourceTree = "<group>";
-		};
-		4D13C9C01CA021220097E7AE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4D13C9C31CA0214F0097E7AE /* MaterialView.swift */,
-				4D13C9C41CA0214F0097E7AE /* MaterialButton.swift */,
-				4D13C9C51CA0214F0097E7AE /* MateriaTextField.swift */,
-			);
-			name = View;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		4D13C9C11CA021370097E7AE /* Model */ = {
@@ -121,6 +110,16 @@
 				4D13C9CA1CA021820097E7AE /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		4DC0BF3D1F124EB800B2FBD5 /* MaterialUI */ = {
+			isa = PBXGroup;
+			children = (
+				4DC0BF371F124EAE00B2FBD5 /* MateriaTextField.swift */,
+				4DC0BF381F124EAE00B2FBD5 /* MaterialView.swift */,
+				4DC0BF391F124EAE00B2FBD5 /* MaterialButton.swift */,
+			);
+			name = MaterialUI;
 			sourceTree = "<group>";
 		};
 		B7252218D65C1FFDFAF6FE80 /* Frameworks */ = {
@@ -269,12 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D13C9C61CA0214F0097E7AE /* MaterialView.swift in Sources */,
 				4D13C9B11CA013AC0097E7AE /* ViewController.swift in Sources */,
-				4D13C9C71CA0214F0097E7AE /* MaterialButton.swift in Sources */,
-				4D13C9C81CA0214F0097E7AE /* MateriaTextField.swift in Sources */,
+				4DC0BF3C1F124EAE00B2FBD5 /* MaterialButton.swift in Sources */,
 				4D13C9AF1CA013AC0097E7AE /* AppDelegate.swift in Sources */,
 				4D13C9CB1CA021820097E7AE /* Constants.swift in Sources */,
+				4DC0BF3B1F124EAE00B2FBD5 /* MaterialView.swift in Sources */,
+				4DC0BF3A1F124EAE00B2FBD5 /* MateriaTextField.swift in Sources */,
 				4DFF18B21D000AC4001E6108 /* SerachController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
