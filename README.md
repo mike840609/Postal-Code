@@ -7,8 +7,9 @@ you can also use the input method to convert text to zip code .
 
 ## ScreenShot
 
- ![image]()
-  ![image]()
+ ![image](https://github.com/mike840609/Postal-Code/blob/master/img/1.png)
+ ![image](https://github.com/mike840609/Postal-Code/blob/master/img/2.png)
+ ![image](https://github.com/mike840609/Postal-Code/blob/master/img/3.png)
 
 ## Installation
 

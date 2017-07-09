@@ -58,7 +58,7 @@ class SerachController: UIViewController {
                 
                 var jsonObj = SwiftyJSON.JSON(json)
                 
-                self.codeLabel.text = "郵遞區號 (zip code):" + String(describing: jsonObj["zipcode"])
+                self.codeLabel.text = " Zip Code :" + String(describing: jsonObj["zipcode"])
                 
                 callback(true)
                 

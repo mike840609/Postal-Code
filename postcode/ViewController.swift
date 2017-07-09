@@ -92,8 +92,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
                 self.showLocalPoint()
                 
-                self.postCodeLabel!.text = "郵遞區號:\(self.postCode)"
-                self.localLabel!.text = "目前位置:\(self.localString)"
+                self.postCodeLabel!.text = "Zip Code:\(self.postCode)"
+                self.localLabel!.text = "Now Location:\(self.localString)"
                 
                 
                 //self.localString =
@@ -139,7 +139,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.title = "您的現在位置"
+        annotation.title = "Your Location"
         annotation.subtitle = "\(self.localLabel!.text!)"
         
         mapView?.addAnnotation(annotation)
@@ -157,7 +157,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     
     @IBAction func reloadBtnTapped(_ sender: AnyObject) {
         reloadLocation()
-        showAlert("地址:\(localString)", msg: "郵遞區號:\(postCode)")
+        showAlert("Address:\(localString)", msg: ":Zip Code\(postCode)")
     }
     
     @IBAction func unwindToMapView(_ segue:UIStoryboardSegue){
