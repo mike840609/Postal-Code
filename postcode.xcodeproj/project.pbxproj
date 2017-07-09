@@ -80,8 +80,6 @@
 				4D13C9C11CA021370097E7AE /* Model */,
 				4D13C9C01CA021220097E7AE /* View */,
 				4D13C9AE1CA013AC0097E7AE /* AppDelegate.swift */,
-				4D13C9B01CA013AC0097E7AE /* ViewController.swift */,
-				4DFF18B11D000AC4001E6108 /* SerachController.swift */,
 				4D13C9B21CA013AC0097E7AE /* Main.storyboard */,
 				4D13C9B51CA013AC0097E7AE /* Assets.xcassets */,
 				4D13C9B71CA013AC0097E7AE /* LaunchScreen.storyboard */,
@@ -111,6 +109,8 @@
 		4D13C9C21CA0213E0097E7AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4D13C9B01CA013AC0097E7AE /* ViewController.swift */,
+				4DFF18B11D000AC4001E6108 /* SerachController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
