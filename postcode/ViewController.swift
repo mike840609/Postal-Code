@@ -30,29 +30,23 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-        //精确到1000米,距离过滤器，定义了设备移动后获得位置信息的最小距离
         locationManager.distanceFilter = kCLLocationAccuracyKilometer
         
-        //更新距离
         locationManager.distanceFilter = 10
         
-        //如果是IOS8及以上版本需调用这个方法
         locationManager.requestAlwaysAuthorization()
         
-        //使用应用程序期间允许访问位置数据
         locationManager.requestWhenInUseAuthorization();
         
-        //启动定位 從這邊開始執行===========================================
+        // start locate ===========================================
         locationManager.startUpdatingLocation()
         
     }
+
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
-    //FIXME: CoreLocationManagerDelegate 中获取到位置信息的处理函数
-    func  locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //FIXME: CoreLocationManagerDelegate
+    func  locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location:CLLocation = locations[locations.count-1] as CLLocation
         
@@ -60,12 +54,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         if (location.horizontalAccuracy > 0) {
             self.locationManager.stopUpdatingLocation()
-            print("纬度: \(location.coordinate.latitude) 经度: \(location.coordinate.longitude)")
+            
             self.locationManager.stopUpdatingLocation()
-            print("结束定位")
         }
         
-        //使用坐标，获取地址
+        
         let geocoder = CLGeocoder()
         
         geocoder.reverseGeocodeLocation(currLocation, completionHandler: { (placemarks, error) -> Void in
@@ -76,10 +69,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             if placemarks != nil && placemarks!.count > 0{
                 let placemark = placemarks![0] as CLPlacemark
                 
-                print(placemark.country)
-                print(placemark.locality)
-                print(placemark.name)
-                print(placemark.postalCode)
+                print(placemark.country ?? "")
+                print(placemark.locality ?? "")
+                print(placemark.name ?? "")
+                print(placemark.postalCode ?? "")
                 
                 guard let country = placemark.country else{
                     return
@@ -117,16 +110,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         })
     }
     
-    func  locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func  locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
     
-    func showAlert(title:String,msg:String){
+    func showAlert(_ title:String,msg:String){
         
-        let alert = UIAlertController(title: title, message:msg , preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let alert = UIAlertController(title: title, message:msg , preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
         
     }
     
@@ -158,18 +151,17 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         if (CLLocationManager.locationServicesEnabled())
         {
             locationManager.startUpdatingLocation()
-            print("定位开始")
         }
         
     }
     
-    @IBAction func reloadBtnTapped(sender: AnyObject) {
+    @IBAction func reloadBtnTapped(_ sender: AnyObject) {
         reloadLocation()
         showAlert("地址:\(localString)", msg: "郵遞區號:\(postCode)")
     }
     
-    @IBAction func unwindToMapView(segue:UIStoryboardSegue){
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func unwindToMapView(_ segue:UIStoryboardSegue){
+        dismiss(animated: true, completion: nil)
     }
 }
 
